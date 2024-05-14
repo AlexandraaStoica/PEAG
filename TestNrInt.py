@@ -46,10 +46,10 @@ def GA(cost_max, dim, NMAX, pc, pm):
     nrm = 1
 
     while it < NMAX and not gata:
-        parinti = ruleta(pop_initiala, dim, n)
+        parinti = ruleta()
         pop_copii = crossover_unipunct()
-        pop_copii_mutanti = mutatie_populatie(pop_copii, dim, n, c, v, cost_max, pm)
-        pop_urmatoare = elitism(pop_initiala, pop_copii_mutanti, dim, n)
+        pop_copii_mutanti = mutatie_populatie()
+        pop_urmatoare = elitism()
         minim = numpy.min(pop_urmatoare[:, -1])
         maxim = numpy.max(pop_urmatoare[:, -1])
         if maxim == istoric_v[it]:
