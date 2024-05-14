@@ -47,8 +47,8 @@ def GA(dim, NMAX, pc, pm):
     n = 10
 
     while it < NMAX and not gata:
-        parinti = ruleta(populatia_init, dim, n)
-        pop_copii = crossover_populatie(parinti, dim, n, c, pc)
+        parinti = ruleta()
+        pop_copii = crossover_populatie()
         pop_copii_mutanti = mutatie_copii()
         pop_urmatoare = elitism(populatia_init, pop_copii_mutanti, dim, n)
         minim = numpy.min(pop_urmatoare[:, -1])
